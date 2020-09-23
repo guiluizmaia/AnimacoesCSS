@@ -1,0 +1,52 @@
+/*Aqui damos uma leve alinhada*/
+body{
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+/*Aqui daremos o formato de um quadrado ao nosso objeto*/
+.quadrado{
+    /* 100px de largura e altura */
+    width: 100px;
+    height: 100px;
+    /* Cor azul */
+    background-color: blue;
+    /* Como primeiro atributo coloquei o nome do keyframes, depois
+    o tempo que dura, se a animação vai ser alternada e infinita */
+    animation: anima 1s alternate infinite;
+}
+/*
+Aqui é o pulo do gato
+@keyframes anima { 
+    De
+    from{
+        transform: rotateZ(0deg);
+    }
+  Para
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+*/
+
+@keyframes anima { 
+    /*Porcentagem do tempo*/
+    0%{
+        transform: translateX(1560px) rotateZ(0deg);
+        
+    }
+    25%{
+        transform: translateX(1560px) translateY(500px) rotateZ(90deg);
+    }
+    50%{
+        transform: translateX(0px) translateY(500px) rotateZ(180deg);
+    }
+    75%{
+        transform: translateX(0px) rotateZ(360deg);
+    }
+    100%{
+        transform: translateX(1560px) rotateZ(0deg);
+        
+    }
+}
